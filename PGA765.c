@@ -31,7 +31,7 @@ struct NodeFCFS{
         struct NodeFCFS* next;
 };
 
-// Function to create a new Node (for RR and MLFQ)
+// Function to create a new Node (for Round Robin and Multi-Level Feedback Queue)
 struct Node* createNode(int arrivalT, int burstT, int procNum){
     // Allocate memory and initialize values
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -192,7 +192,7 @@ struct Node* dequeue(struct Node** head){
     return node;
 }
 
-// Function to process nodes for MLFQ scheduling
+// Function to process nodes for Multi-Level Feedback Queue scheduling
 struct Node2* Processing(struct Node* head, struct Node2* head2){
     struct Node* RRhead = createNode(head->arrivalTime,head->burstTime,head->processNum);
     struct Node* RRtail = RRhead;
@@ -323,9 +323,9 @@ CheckQuantum:
     return head2;
 }
 
-// Main function to execute the Multilevel Feedback Queue (MLFQ) scheduling
+// Main function to execute the Multi-level Feedback Queue (MLFQ) scheduling
 void MLFQ(){
-    // Get user input, sort processes, and process them using MLFQ scheduling
+    // Get user input, sort processes, and process them using Multi-Level Feedback Queue scheduling
     // Print the results including average times and throughput
 
     int num=0;
@@ -654,7 +654,7 @@ BTCheck4:
 
 }
 
-// Function to create a new NodeFCFS (for FCFS scheduling)
+// Function to create a new NodeFCFS (for First Come First Served scheduling)
 struct NodeFCFS* createNodeFCFS(int arrivalT, int burstT, int procNum) {
     // Allocate memory and initialize values
     struct NodeFCFS* newNode = (struct NodeFCFS*)malloc(sizeof(struct NodeFCFS));
@@ -665,9 +665,9 @@ struct NodeFCFS* createNodeFCFS(int arrivalT, int burstT, int procNum) {
     return newNode;
 }
 
-// Function to calculate waiting time for FCFS scheduling
+// Function to calculate waiting time for First Come First Served scheduling
 void calculateWaitTimeFCFS(struct NodeFCFS* head){
-    // Calculate waiting time for each process in FCFS manner
+    // Calculate waiting time for each process in First Come First Served manner
     struct NodeFCFS* currentNode = head;
     struct NodeFCFS* previousNode = NULL;
 
@@ -692,7 +692,7 @@ void calculateWaitTimeFCFS(struct NodeFCFS* head){
     }
 }
 
-// Function to calculate turnaround time for FCFS scheduling
+// Function to calculate turnaround time for First Come First Served scheduling
 void calculateTurnaroundFCFS(struct NodeFCFS* head){
     // Calculate turnaround time for each process
     struct NodeFCFS* currentNode = head;
@@ -704,7 +704,7 @@ void calculateTurnaroundFCFS(struct NodeFCFS* head){
     }
 }
 
-// Function to calculate average waiting time for FCFS scheduling
+// Function to calculate average waiting time for First Come First Served scheduling
 float calculateAverageWaitingTimeFCFS(struct NodeFCFS* head){
     // Iterate through the list and calculate the average waiting time
     struct NodeFCFS* currentNode = head;
@@ -723,7 +723,7 @@ float calculateAverageWaitingTimeFCFS(struct NodeFCFS* head){
     return waitingTimeAverage;
 }
 
-// Function to calculate average turnaround time for FCFS scheduling
+// Function to calculate average turnaround time for First Come First Served scheduling
 float calculateAverageTurnaroundTimeFCFS(struct NodeFCFS* head){
     // Iterate through the list and calculate the average turnaround time
     struct NodeFCFS* currentNode = head;
@@ -742,9 +742,9 @@ float calculateAverageTurnaroundTimeFCFS(struct NodeFCFS* head){
     return averageTurnaroundTime;
 }
 
-// Function to calculate throughput for FCFS scheduling
+// Function to calculate throughput for First Come First Served scheduling
 float calculateThroughputFCFS(struct NodeFCFS* head, int NumOfProcesses){
-    // Calculate the total time and divide the number of processes by it for FCFS
+    // Calculate the total time and divide the number of processes by it for First Come First Served
     float throughput;
     struct NodeFCFS* currentNode;
     int minAT = head->arrivalTime, maxCT = head->completionTime, totalTime;
