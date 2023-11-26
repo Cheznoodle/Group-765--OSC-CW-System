@@ -14,13 +14,14 @@ This program implements three different scheduling algorithms: **First Come Firs
 To compile and run the program, ensure that you have a C compiler installed (such as GCC). Compile the code using the following command:
 
 ```bash
-  gcc -o scheduler main.c
+  gcc -o PGA765 PGA765.c
+
 ```
 
 Run the compiled program:
 
 ```bash
-  ./scheduler
+  PGA765.exe
 ```
 
 ## Usage
