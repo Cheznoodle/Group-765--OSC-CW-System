@@ -11,14 +11,23 @@ This program implements three different scheduling algorithms: **First Come Firs
 
 ## Compilation and Execution
 
-To compile and run the program, ensure that you have a C compiler installed (such as GCC). Compile the code using the following command:
+1. Locate the file in the directory by using the following command:
+
+Example:
+
+```bash
+  C:\Users\Cheznoodle>cd downloads
+
+```
+
+2. To compile and run the program, please make sure that you have a C compiler installed (such as GCC). Compile the code using the following command:
 
 ```bash
   gcc -o PGA765 PGA765.c
 
 ```
 
-Run the compiled program:
+3. Run the compiled program:
 
 ```bash
   PGA765.exe
