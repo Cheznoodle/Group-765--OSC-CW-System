@@ -1,5 +1,3 @@
-# Group-765--OSC-CW-System
-
 # Operating Systems & Concurrency Coursework
 
 This program implements three different scheduling algorithms: **First Come First Served (FCFS)**, **Round Robin (RR)**, and **Multi-Level Feedback Queue (MLFQ)**. It is written in C and provides a simple console-based user interface to interact with each scheduling algorithm.
@@ -37,6 +35,7 @@ Upon running the program, you will be prompted to choose a scheduling algorithm:
   4. Exit
 ```
 
+
 Enter the number corresponding to your choice and follow the on-screen instructions to enter details like the number of processes, arrival times, burst times, and time quantum (for RR and MLFQ).
 
 ## Output
@@ -49,6 +48,7 @@ After inputting the necessary data, the program will display the scheduling resu
 - Completion Time
 - Waiting Time
 - Turnaround Time
+  
 
 Additionally, the program calculates and displays the average waiting time, throughput, and average turnaround time for the processes based on the selected scheduling algorithm.
 
