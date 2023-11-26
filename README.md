@@ -74,3 +74,10 @@ You can run this program in an Integrated Development Environment (IDE) such as 
 5. **Input Data**: Follow the on-screen prompts to input the required data for the scheduling algorithms.
 
 6. **View Results**: After processing the input data, the program will display the scheduling results in the IDE's console or output window.
+
+## Troubleshooting:
+
+- If you encounter any compilation errors, check for syntax errors or missing libraries, and ensure that your IDE is set up to compile C programs.
+  
+- Make sure that the build/run configurations in your IDE are properly set up for executing C programs.
+
