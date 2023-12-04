@@ -1,34 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Node structures for different scheduling algorithms
+// Node structure for Round Robin and Multi-Level Feedback Queue scheduling algorithms.
 struct Node
 {
-    int processNum;
-    int arrivalTime;
-    int burstTime;
-    int remainingTime;
-    struct Node* next;
+    int processNum;     // Process number
+    int arrivalTime;    // Arrival time of the process
+    int burstTime;      // Total execution time required by the process
+    int remainingTime;  // Remaining execution time for the process
+    struct Node* next;  // Pointer to the next node in the list
 };
 
+// Node structure for storing scheduling results, used in all scheduling algorithms.
 struct Node2{
-    int processNum;
-    int arrivalTime;
-    int burstTime;
-    int completionTime;
-    int waitingTime;
-    int turnaroundTime;
-    struct Node2* next;
+    int processNum;         // Process number
+    int arrivalTime;        // Arrival time of the process
+    int burstTime;          // Total execution time required by the process
+    int completionTime;     // Time at which the process completes execution
+    int waitingTime;        // Time the process waits in the queue before execution
+    int turnaroundTime;     // Total time taken from arrival to completion
+    struct Node2* next;     // Pointer to the next node in the list
 };
 
+// Node structure specifically for First-Come, First-Served scheduling.
 struct NodeFCFS{
-        int processNum;
-        int arrivalTime;
-        int burstTime;
-        int waitingTime;
-        int completionTime;
-        int turnaroundTime;
-        struct NodeFCFS* next;
+        int processNum;         // Process number
+        int arrivalTime;        // Arrival time of the process
+        int burstTime;          // Total execution time required by the process
+        int waitingTime;        // Time the process waits in the queue before execution
+        int completionTime;     // Time at which the process completes execution
+        int turnaroundTime;     // Total time taken from arrival to completion
+        struct NodeFCFS* next;  // Pointer to the next node in the list
 };
 
 // Function to create a new Node (for Round Robin and Multi-Level Feedback Queue)
